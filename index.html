@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Roadtrip Trivia Challenge</title>
+  <meta name="description" content="Guess fun facts with your roadtrip partner!">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1 class="title">🚗 Roadtrip Trivia Challenge</h1>
+      <p class="subtitle">Guess the fact, then reveal the answer.</p>
+    </header>
+
+    <section class="card">
+      <div class="progress" id="progress"></div>
+      <div id="question" class="question">Loading question…</div>
+
+      <div class="answer-wrap">
+        <button id="revealBtn" class="btn primary">Show Answer</button>
+        <div id="answer" class="answer" hidden>
+          <h3>Answer</h3>
+          <p id="answerText"></p>
+          <p id="sourceWrap" class="source" hidden>
+            <span>Note:</span> <span id="sourceText"></span>
+          </p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="nextBtn" class="btn" disabled>Ask Another Question</button>
+        <button id="resetBtn" class="btn ghost">Reset</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Add your own questions in <code>questions.js</code>.</p>
+    </footer>
+  </main>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
